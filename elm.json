@@ -1,7 +1,7 @@
 {
   "type": "package",
   "name": "buildrtech/elm-animator-with-elm-css",
-  "summary": "A timeline-based animation engine with elm-css support (forked from elm-animator)",
+  "summary": "An elm-animator fork that supports elm-css",
   "license": "BSD-3-Clause",
   "version": "0.0.1",
   "exposed-modules": [
