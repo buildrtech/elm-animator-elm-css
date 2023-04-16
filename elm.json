@@ -3,7 +3,7 @@
   "name": "buildrtech/elm-animator-with-elm-css",
   "summary": "An elm-animator fork that supports elm-css",
   "license": "BSD-3-Clause",
-  "version": "1.0.0",
+  "version": "10.0.0",
   "exposed-modules": [
     "Animator",
     "Animator.Timeline",
