@@ -103,8 +103,8 @@ Because of that, `in2d` and `in3d` are constructed a little differently instead 
 import Animator exposing (..)
 import Color exposing (Color)
 import Duration
-import Html exposing (Html)
-import Html.Attributes as Attr
+import Html.Styled as Html exposing (Html)
+import Html.Styled.Attributes as Attr
 import Html.Keyed
 import Internal.Interpolate as Interpolate
 import Internal.Time as Time

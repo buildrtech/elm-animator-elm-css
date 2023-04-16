@@ -34,8 +34,8 @@ If you can't find an attribute here, you might need to use [`Animator.Inline.sty
 
 import Animator exposing (..)
 import Color exposing (Color)
-import Html
-import Html.Attributes as Attr
+import Html.Styled as Html
+import Html.Styled.Attributes as Attr
 
 
 {-| Change the opacity for an element.
