@@ -2,6 +2,7 @@ module Animator exposing
     ( Animation, delay, transition
     , Attribute, opacity
     , rotation, x, y, scale, scaleX, scaleY
+    , xAsSingleProp
     , color, px, int, float
     , withWobble, withBezier, withImpulse
     , Duration, ms
@@ -11,16 +12,17 @@ module Animator exposing
     , onTimeline, onTimelineWith
     , div, node
     , Css, css
-    , xAsSingleProp
     )
 
 {-|
 
-@docs Animation, delay, transition
+@docs Animation, transition
 
 @docs Attribute, opacity
 
 @docs rotation, x, y, scale, scaleX, scaleY
+
+@docs xAsSingleProp
 
 @docs color, px, int, float
 
@@ -180,6 +182,7 @@ withWobble wob prop =
             Css.ColorProp name (Move.withWobble wob move)
 
 
+{-| -}
 type alias Duration =
     Time.Duration
 
@@ -213,24 +216,29 @@ delay dur (Animation now attrs) =
     Animation (Time.rollbackBy dur now) attrs
 
 
+{-| -}
 type Animation
     = Animation Time.Absolute (List Css.RenderedProp)
 
 
+{-| -}
 type Step
     = Step Duration (List Attribute)
 
 
+{-| -}
 set : List Attribute -> Step
 set attrs =
     step Time.zeroDuration attrs
 
 
+{-| -}
 wait : Duration -> Step
 wait dur =
     step dur []
 
 
+{-| -}
 step : Duration -> List Attribute -> Step
 step =
     Step
@@ -502,6 +510,7 @@ color name colorValue =
         (Move.to colorValue)
 
 
+{-| -}
 spinning : Duration -> Animation
 spinning dur =
     keyframes
@@ -516,6 +525,7 @@ spinning dur =
         ]
 
 
+{-| -}
 pulsing : Duration -> Animation
 pulsing dur =
     keyframes
@@ -530,6 +540,7 @@ pulsing dur =
         ]
 
 
+{-| -}
 bouncing : Duration -> Float -> Animation
 bouncing dur distance =
     if Time.isZeroDuration dur then
@@ -559,6 +570,7 @@ bouncing dur distance =
             ]
 
 
+{-| -}
 pinging : Duration -> Animation
 pinging dur =
     keyframes
@@ -575,6 +587,7 @@ pinging dur =
         ]
 
 
+{-| -}
 onTimeline : Timeline state -> (state -> List Attribute) -> Animation
 onTimeline timeline toProps =
     Animation
@@ -582,6 +595,7 @@ onTimeline timeline toProps =
         (Css.propsToRenderedProps timeline toProps)
 
 
+{-| -}
 onTimelineWith :
     Timeline state
     ->
@@ -639,7 +653,7 @@ transition transitionDuration props =
         (Css.propsToRenderedProps timeline identity)
 
 
-{--}
+{-| -}
 div :
     Animation
     -> List (Html.Attribute msg)

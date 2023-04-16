@@ -86,6 +86,7 @@ velocity timeline lookup =
         |> .velocity
 
 
+{-| -}
 movement : Timeline state -> (state -> Movement) -> { position : Float, velocity : Float }
 movement timeline lookup =
     Timeline.foldpAll lookup
