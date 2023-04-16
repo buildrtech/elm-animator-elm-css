@@ -84,8 +84,8 @@ Here's an element that's blinking.
 
 import Animator.Timeline exposing (Timeline)
 import Color
-import Html exposing (Html)
-import Html.Attributes as Attr
+import Html.Styled as Html exposing (Html)
+import Html.Styled.Attributes as Attr
 import Internal.Css as Css
 import Internal.Css.Props
 import Internal.Duration as Duration
