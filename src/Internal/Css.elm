@@ -10,8 +10,7 @@ module Internal.Css exposing
 {-| -}
 
 import Color
-import Html
-import Html.Attributes as Attr exposing (id)
+import Html.Styled.Attributes as Attr exposing (id)
 import Internal.Bezier as Bezier
 import Internal.Bits as Bits
 import Internal.Css.Props as Props
