@@ -105,7 +105,6 @@ import Color exposing (Color)
 import Duration
 import Html.Styled as Html exposing (Html)
 import Html.Styled.Attributes as Attr
-import Html.Keyed
 import Internal.Interpolate as Interpolate
 import Internal.Time as Time
 import Internal.Timeline as Timeline
