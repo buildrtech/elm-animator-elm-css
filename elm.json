@@ -3,7 +3,7 @@
   "name": "buildrtech/elm-animator-with-elm-css",
   "summary": "An elm-animator fork that supports elm-css",
   "license": "BSD-3-Clause",
-  "version": "1.0.0",
+  "version": "4.0.0",
   "exposed-modules": [
     "Animator",
     "Animator.Timeline",
@@ -16,7 +16,7 @@
     "elm/browser": "1.0.0 <= v < 2.0.0",
     "elm/core": "1.0.0 <= v < 2.0.0",
     "elm/time": "1.0.0 <= v < 2.0.0",
-    "rtfeldman/elm-css": "18.0.0 <= v < 19.0.0"
+    "rtfeldman/elm-css": "17.0.0 <= v < 19.0.0"
   },
   "test-dependencies": {
     "elm/random": "1.0.0 <= v < 2.0.0",
