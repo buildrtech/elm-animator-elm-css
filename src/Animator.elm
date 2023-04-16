@@ -62,8 +62,8 @@ Check out how they're defined if you want to make your own.
 import Animator.Timeline exposing (Timeline)
 import Color
 import Duration
-import Html exposing (Html)
-import Html.Attributes as Attr
+import Html.Styled as Html exposing (Html)
+import Html.Styled.Attributes as Attr
 import Internal.Css as Css
 import Internal.Css.Props
 import Internal.Move as Move

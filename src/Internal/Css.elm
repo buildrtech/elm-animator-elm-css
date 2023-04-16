@@ -11,7 +11,7 @@ module Internal.Css exposing
 
 import Color
 import Duration
-import Html.Attributes exposing (id)
+import Html.Styled.Attributes exposing (id)
 import Internal.Bezier as Bezier
 import Internal.Bits as Bits
 import Internal.Css.Props as Props
